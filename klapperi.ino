@@ -16,7 +16,9 @@ void loop(){
     int sensorValue = digitalRead(soundSensor); /* määrittää mitä äänisensori lukee */
       if (sensorValue == HIGH){ /* lukee äänisensorin muutoksia */
       condition = !condition; /* kääntää arvon */
-      digitalWrite(pinLEDred, condition); /* "pinLEDred" voi vaihtaa tarvittaessa muihin eri pinneihin */
+      digitalWrite(pinLEDgreen, condition);
+      digitalWrite(pinLEDblue, condition); /* kaikki ledit tuottavat valkoisen valon */
+      digitalWrite(pinLEDred, condition);
         Serial.println (" Ääni kuuluu ");  /* printtaa serialiin jos kuuluu ääni */
      }
 }
